@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EEBox - Extremely Easy Box</title>
     <style>
       body {
@@ -45,6 +46,26 @@
         font-size: 1rem;
         margin-bottom: 20px;
       }
+      .download-btn {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #0b0b0c;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 12px 32px;
+        border-radius: 8px;
+        border: 1px solid #ffffff;
+        transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
+        cursor: pointer;
+      }
+      .download-btn:hover {
+        background-color: #d4d4d8;
+        border-color: #d4d4d8;
+      }
+      .download-btn:active {
+        transform: scale(0.97);
+      }
       footer {
         margin-top: 30px;
         font-size: 0.85rem;
@@ -62,9 +83,18 @@
           This game has no dumb things like built-in save or mod systems, 
           tools or complicated things. Only pure dragging, creation and activation.</p>
       </header>
+
+      <a href="https://oramix.itch.io/eebox" class="download-btn" target="_blank" rel="noopener noreferrer">
+        Download
+      </a>
+
       <footer>
-        <p>OramiX © 2026. GPLv3 license.</p>
+        <p>OramiX © <span id="year"></span></p>
       </footer>
     </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
