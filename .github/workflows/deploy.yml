@@ -29,12 +29,12 @@ jobs:
         uses: actions/jekyll-build-pages@v1.0.13
         with:
           source: '.'
-          destination: '${{ runner.temp }}/bloptmp'
+          destination: '${{ runner.temp }}'
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: '${{ runner.temp }}/bloptmp'
+          path: '${{ runner.temp }}'
 
       - name: Deploy to GitHub Pages
         id: deployment
